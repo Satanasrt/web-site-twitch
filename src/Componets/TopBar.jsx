@@ -2,51 +2,52 @@ import React from 'react';
 
 const TopBar = () => {
   return (
-    <div className="sticky top-0 z-50 bg-zinc-800 text-white flex flex-col md:flex-row items-center justify-between p-3">
+    <div className="sticky top-0 z-50    bg-zinc-800 text-white flex items-center justify-between p-3">
       {/* Logo y enlaces de navegación */}
-      <div className="flex items-center space-x-4 md:space-x-10">
+      <div className="flex items-center space-x-10">
         <img
           src="https://static.twitchcdn.net/assets/favicon-32-e29e246c157142c94346.png"
           alt="Twitch Logo"
           className="w-10 h-10"
         />
-        <nav className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10">
-          <a href="#" className="text-white font-semibold hover:text-purple-500 text-xl md:text-2xl">
+        <nav className="flex space-x-10">
+          <a href="#" className="text-white font-semibold hover:text-purple-500 text-2xl">
             Siguiendo
           </a>
-          <a href="#" className="text-purple-500 font-semibold hover:text-white text-xl md:text-2xl">
+          <a href="#" className="text-purple-500 font-semibold hover:text-white text-2xl">
             Explorar
           </a>
         </nav>
       </div>
 
       {/* Barra de búsqueda */}
-      <div className="flex items-center bg-zinc-800 rounded-md overflow-hidden w-full max-w-md mt-4 md:mt-0 border-b-2 border-gray-700">
-        <input
-          type="text"
-          placeholder="Buscar"
-          className="bg-zinc-900 text-gray-300 px-4 py-2 w-full outline-none"
-        />
-        <button className="bg-zinc-800 p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-gray-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-4.35-4.35M10.5 17a6.5 6.5 0 100-13 6.5 6.5 0 000 13z"
-            />
-          </svg>
-        </button>
-      </div>
+      <div className="flex items-center bg-zinc-800 rounded-md overflow-hidden w-full max-w-md  border-b-2 border-gray-700">
+      <input
+        type="text"
+        placeholder="Buscar"
+        className=" bg-zinc-900 text-gray-300 px-4 py-2 w-full outline-none"
+      />
+      <button className=" bg-zinc-800 p-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-gray-400"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 21l-4.35-4.35M10.5 17a6.5 6.5 0 100-13 6.5 6.5 0 000 13z"
+          />
+        </svg>
+      </button>
+    </div>
+
 
       {/* Íconos de la derecha */}
-      <div className="flex items-center space-x-2 md:space-x-4 mt-4 md:mt-0">
+      <div className="flex items-center space-x-4">
         <button className="text-gray-100 hover:text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +96,7 @@ const TopBar = () => {
             />
           </svg>
         </button>
-        <button className="bg-gray-800 text-white px-3 py-1 rounded-md hover:bg-gray-700 hidden md:block">
+        <button className="bg-gray-800 text-white px-3 py-1 rounded-md hover:bg-gray-700">
           Disfruta gratis sin anuncios
         </button>
         <img

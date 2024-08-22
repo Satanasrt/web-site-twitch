@@ -37,10 +37,10 @@ const App = () => {
       <TopBar />
       <div className="flex flex-col lg:flex-row">
         <Sidebar className="w-full lg:w-64" />
-        <div className="p-6 flex-1">
+        <div className="flex-1 p-6">
           <ExploreSection />
-          <div className="flex flex-col lg:flex-row items-center lg:items-start mb-8">
-            <nav className="flex space-x-4 mb-4 lg:mb-0 lg:space-x-10">
+          <div className="mb-8">
+            <nav className="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-10">
               <a href="#" className="text-white font-semibold hover:text-purple-500 text-xl">
                 Categoría
               </a>
@@ -48,26 +48,26 @@ const App = () => {
                 Canales en vivo
               </a>
             </nav>
+          </div>
 
-            <div className="w-full lg:w-auto flex flex-col lg:flex-row items-center lg:items-start">
-              <input
-                type="text"
-                placeholder="Buscar o Buscar etiquetas"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-gray-800 text-white p-2 rounded-md mb-4 lg:mb-0 lg:mr-4 w-full lg:w-64"
-              />
-              
-              <select
-                value={selectedLanguage}
-                onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="bg-gray-800 text-white p-2 rounded-md w-full lg:w-64"
-              >
-                <option value="">Seleccionar idioma</option>
-                <option value="es">Español</option>
-                <option value="en">Inglés</option>
-              </select>
-            </div>
+          {/* Buscador y Selector de Idioma */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-center mb-10 space-y-4 lg:space-y-0">
+            <input
+              type="text"
+              placeholder="Buscar o Buscar etiquetas"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-gray-800 text-white p-2 rounded-md w-full lg:w-64"
+            />
+            <select
+              value={selectedLanguage}
+              onChange={(e) => setSelectedLanguage(e.target.value)}
+              className="bg-gray-800 text-white p-2 rounded-md w-full lg:w-64 lg:ml-4"
+            >
+              <option value="">Seleccionar idioma</option>
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+            </select>
           </div>
 
           <GameList games={games} />
