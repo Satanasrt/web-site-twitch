@@ -3,7 +3,7 @@ import GameCard from './GameCard';
 
 const GameList = ({ games }) => {
   return (
-    <div className="bg-zinc-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+    <div className="bg-zinc-900 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4">
       {games.map((game, index) => (
         <GameCard
           key={index}
